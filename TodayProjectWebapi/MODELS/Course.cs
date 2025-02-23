@@ -10,6 +10,7 @@ namespace TodayProjectWebapi.MODELS
     {
         [Key]
         public int CourseId { get; set; }
+        [Required]
         public string CourseName { get; set; }
         public ICollection<Learner> Learners { get; set; }
     }

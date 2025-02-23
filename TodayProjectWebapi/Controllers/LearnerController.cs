@@ -99,10 +99,10 @@ namespace TodayProjectWebapi.Controllers
         {
             try
             {
-                var Learn = await ILR.GetLearnerByCourseID(CourseId);
-                if (Learn != null)
+                var LearnList = await ILR.GetLearnerByCourseID(CourseId);
+                if (LearnList.Count>0)
                 {
-                    return Ok(Learn);
+                    return Ok(LearnList);
 
                 }
                 else

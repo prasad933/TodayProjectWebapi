@@ -9,7 +9,7 @@ namespace TodayProjectWebapi.IREPOSITORIES
         Task<List<Learner>> GetLearners();
         Task<Learner> GetLearnerID(int LearnerId);
 
-        Task<Learner> GetLearnerByCourseID(int CourseId);
+        Task<List<Learner>> GetLearnerByCourseID(int CourseId);
 
         Task<int> InsertLearner(Learner learner);
 

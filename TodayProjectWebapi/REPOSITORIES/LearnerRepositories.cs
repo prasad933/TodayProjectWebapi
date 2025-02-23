@@ -41,17 +41,16 @@ namespace TodayProjectWebapi.REPOSITORIES
             return await TDC.SaveChangesAsync();
         }
 
-        public async Task<Learner> GetLearnerByCourseID(int CourseId)
-        {
-            return await TDC.Learners.Where(x=>x.CourseId == CourseId).SingleOrDefaultAsync();
-        }
+       
 
         public async Task<Learner> GetLearnerID(int CourseId)
         {
             return  await TDC.Learners.FindAsync(CourseId);
         }
-        
 
-       
+        public async Task<List<Learner>> GetLearnerByCourseID(int CourseId)
+        {
+            return await TDC.Learners.Where(x => x.CourseId == CourseId).ToListAsync();
+        }
     }
 }

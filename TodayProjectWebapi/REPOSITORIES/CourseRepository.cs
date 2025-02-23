@@ -25,10 +25,7 @@ namespace TodayProjectWebapi.REPOSITORIES
               return await Tdb.Courses.ToListAsync();
         }
 
-        public async Task<Course> GetCourseId(int courseId)
-        {
-          return await Tdb.Courses.FindAsync(courseId);
-        }
+        
 
         
         public async Task<int> InsertCource(Course Cource)
@@ -54,6 +51,11 @@ namespace TodayProjectWebapi.REPOSITORIES
         {
            //await Tdb.Courses.Where(x=>x.CourseName==CourseName).SingleOrDefaultAsync();
             return await Tdb.Courses.Where(x => x.CourseName == CourseName).SingleOrDefaultAsync();
+        }
+
+        public async Task<Course> GetCourseId(int courseId)
+        {
+            return await Tdb.Courses.FindAsync(courseId);
         }
     }
 }
