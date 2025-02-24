@@ -31,10 +31,10 @@ namespace TodayProjectWebapi.MODELS
         public DateTime DOB { get; set; }
 
         [Required]
+        [RegularExpression(@"^(Male|Female|Other)$", ErrorMessage = "Gender must be Male, Female, or Other")]
         public string Gender { get; set; }
         
         [Required]
-        [RegularExpression(@"^(Male|Female|Other)$", ErrorMessage = "Gender must be Male, Female, or Other")]
         public string ProfileImage { get; set; }
 
 
